@@ -1,0 +1,902 @@
+{
+  "info": {
+    "_postman_id": "7ff44a07-0a4c-4e4a-9832-be4f6801c536",
+    "name": "spring_framework",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53264170",
+    "_collection_link": "https://go.postman.co/collection/53264170-7ff44a07-0a4c-4e4a-9832-be4f6801c536?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "exercises",
+      "item": [
+        {
+          "name": "ej01_intro_spring",
+          "item": [
+            {
+              "name": "GET",
+              "item": [
+                {
+                  "name": "Person Details",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "url": {
+                      "raw": "http://localhost:8080/persons",
+                      "protocol": "http",
+                      "host": [
+                        "localhost"
+                      ],
+                      "port": "8080",
+                      "path": [
+                        "persons"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ej02_intro_spring",
+          "item": [
+            {
+              "name": "GET",
+              "item": [
+                {
+                  "name": "Consult Person",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "url": {
+                      "raw": "http://localhost:8080/envioFormulario",
+                      "protocol": "http",
+                      "host": [
+                        "localhost"
+                      ],
+                      "port": "8080",
+                      "path": [
+                        "envioFormulario"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            },
+            {
+              "name": "POST",
+              "item": [
+                {
+                  "name": "Save Person",
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:8080/envioFormulario?firstName=Susana&lastName=Bitar&secondLastName=Azevedo&birthDate=13/11/1995&gender=Femenino",
+                      "protocol": "http",
+                      "host": [
+                        "localhost"
+                      ],
+                      "port": "8080",
+                      "path": [
+                        "envioFormulario"
+                      ],
+                      "query": [
+                        {
+                          "key": "firstName",
+                          "value": "Susana"
+                        },
+                        {
+                          "key": "lastName",
+                          "value": "Bitar"
+                        },
+                        {
+                          "key": "secondLastName",
+                          "value": "Azevedo"
+                        },
+                        {
+                          "key": "birthDate",
+                          "value": "13/11/1995"
+                        },
+                        {
+                          "key": "gender",
+                          "value": "Femenino"
+                        }
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ej03_intro_spring",
+          "item": [
+            {
+              "name": "GET",
+              "item": [
+                {
+                  "name": "People list",
+                  "item": [
+                    {
+                      "name": "People List XML",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/xml",
+                            "type": "text"
+                          }
+                        ],
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "People List JSON",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Search person",
+                  "item": [
+                    {
+                      "name": "Search Person XML",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/xml",
+                            "type": "text"
+                          }
+                        ],
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas/44444444D",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas",
+                            "44444444D"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Search Person JSON",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas/44444444D",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas",
+                            "44444444D"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PUT",
+              "item": [
+                {
+                  "name": "Update person",
+                  "item": [
+                    {
+                      "name": "JSON",
+                      "item": [
+                        {
+                          "name": "Update person JSON",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "",
+                              "options": {
+                                "raw": {
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "http://localhost:8080/listadoPersonas/11111111A",
+                              "protocol": "http",
+                              "host": [
+                                "localhost"
+                              ],
+                              "port": "8080",
+                              "path": [
+                                "listadoPersonas",
+                                "11111111A"
+                              ]
+                            }
+                          },
+                          "response": []
+                        },
+                        {
+                          "name": "Update person JSON",
+                          "request": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\r\n    \"dni\": \"11111111A\",\r\n    \"firstName\": \"Susana\",\r\n    \"lastName\": \"Editado3\",\r\n    \"secondLastName\": \"García\",\r\n    \"birthDate\": \"15/05/1995\",\r\n    \"gender\": \"Femenino\"\r\n}",
+                              "options": {
+                                "raw": {
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "http://localhost:8080/listadoPersonas",
+                              "protocol": "http",
+                              "host": [
+                                "localhost"
+                              ],
+                              "port": "8080",
+                              "path": [
+                                "listadoPersonas"
+                              ]
+                            }
+                          },
+                          "response": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "XML",
+                      "item": [
+                        {
+                          "name": "Update person",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": ""
+                            },
+                            "url": {
+                              "raw": "http://localhost:8080/listadoPersonas/22222222B",
+                              "protocol": "http",
+                              "host": [
+                                "localhost"
+                              ],
+                              "port": "8080",
+                              "path": [
+                                "listadoPersonas",
+                                "22222222B"
+                              ]
+                            }
+                          },
+                          "response": []
+                        },
+                        {
+                          "name": "Update person",
+                          "request": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/xml",
+                                "type": "text"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "application/xml",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "<UpdatePersonRequestModel>\r\n    <dni>22222222B</dni>\r\n    <firstName>Susana</firstName>\r\n    <lastName>Editado2</lastName>\r\n    <secondLastName>García</secondLastName>\r\n    <birthDate>15/05/1995</birthDate>\r\n    <gender>Femenino</gender>\r\n</UpdatePersonRequestModel>"
+                            },
+                            "url": {
+                              "raw": "http://localhost:8080/listadoPersonas",
+                              "protocol": "http",
+                              "host": [
+                                "localhost"
+                              ],
+                              "port": "8080",
+                              "path": [
+                                "listadoPersonas"
+                              ]
+                            }
+                          },
+                          "response": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Error validation",
+              "item": [
+                {
+                  "name": "Incorrect ID",
+                  "item": [
+                    {
+                      "name": "Incorrect ID",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/xml",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"dni\": \"12345678A\",\r\n    \"firstName\": \"Susana\",\r\n    \"lastName\": \"Editado\",\r\n    \"secondLastName\": \"García\",\r\n    \"birthDate\": \"15/05/1995\",\r\n    \"gender\": \"Femenino\"\r\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Incorrect ID",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/xml",
+                            "type": "text"
+                          }
+                        ],
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas/00000000X",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas",
+                            "00000000X"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Incorrect date",
+                  "item": [
+                    {
+                      "name": "Incorrect date",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"dni\": \"33333333C\",\r\n    \"firstName\": \"Susana\",\r\n    \"lastName\": \"Editado\",\r\n    \"secondLastName\": \"García\",\r\n    \"birthDate\": \"1995-05-15\",\r\n    \"gender\": \"Femenino\"\r\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Incorrect name",
+                  "item": [
+                    {
+                      "name": "Incorrect name",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"dni\": \"33333333C\",\r\n    \"firstName\": \"S\",\r\n    \"lastName\": \"Editado\",\r\n    \"secondLastName\": \"García\",\r\n    \"birthDate\": \"15/05/1995\",\r\n    \"gender\": \"Femenino\"\r\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Invalid ID",
+                  "item": [
+                    {
+                      "name": "Invalid ID",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"dni\": \"333333\",\r\n    \"firstName\": \"Susana\",\r\n    \"lastName\": \"Editado\",\r\n    \"secondLastName\": \"García\",\r\n    \"birthDate\": \"15/05/1995\",\r\n    \"gender\": \"Femenino\"\r\n}"
+                        },
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Format error",
+                  "item": [
+                    {
+                      "name": "Format error",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/pdf",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"dni\": \"33333333C\",\r\n    \"firstName\": \"Susana\",\r\n    \"lastName\": \"Editado\",\r\n    \"secondLastName\": \"García\",\r\n    \"birthDate\": \"15/05/1995\",\r\n    \"gender\": \"Femenino\"\r\n}"
+                        },
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "opcionales",
+          "item": [
+            {
+              "name": "ej03_intro_spring_opcional",
+              "item": [
+                {
+                  "name": "ej02_intro_spring",
+                  "item": [
+                    {
+                      "name": "Error validation",
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                          "raw": "http://localhost:8080/envioFormulario?firstName=S&lastName=Bitar&secondLastName=Azevedo&birthDate=13/11/1995&gender=Femenino",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "envioFormulario"
+                          ],
+                          "query": [
+                            {
+                              "key": "firstName",
+                              "value": "S"
+                            },
+                            {
+                              "key": "lastName",
+                              "value": "Bitar"
+                            },
+                            {
+                              "key": "secondLastName",
+                              "value": "Azevedo"
+                            },
+                            {
+                              "key": "birthDate",
+                              "value": "13/11/1995"
+                            },
+                            {
+                              "key": "gender",
+                              "value": "Femenino"
+                            }
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Save person",
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                          "raw": "http://localhost:8080/envioFormulario?firstName=Susana&lastName=Bitar&secondLastName=Azevedo&birthDate=13/11/1995&gender=Femenino",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "envioFormulario"
+                          ],
+                          "query": [
+                            {
+                              "key": "firstName",
+                              "value": "Susana"
+                            },
+                            {
+                              "key": "lastName",
+                              "value": "Bitar"
+                            },
+                            {
+                              "key": "secondLastName",
+                              "value": "Azevedo"
+                            },
+                            {
+                              "key": "birthDate",
+                              "value": "13/11/1995"
+                            },
+                            {
+                              "key": "gender",
+                              "value": "Femenino"
+                            }
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "ej02_intro_spring_opcional",
+              "item": [
+                {
+                  "name": "ej01_intro_spring",
+                  "item": [
+                    {
+                      "name": "Person Details",
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "url": {
+                          "raw": "http://localhost:8080/persons",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "persons"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                },
+                {
+                  "name": "ej02_intro_spring",
+                  "item": [
+                    {
+                      "name": "Save Person",
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                          "raw": "http://localhost:8080/envioFormulario?firstName=Susana&lastName=Bitar&secondLastName=Azevedo&birthDate=13/11/1995&gender=Femenino",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "envioFormulario"
+                          ],
+                          "query": [
+                            {
+                              "key": "firstName",
+                              "value": "Susana"
+                            },
+                            {
+                              "key": "lastName",
+                              "value": "Bitar"
+                            },
+                            {
+                              "key": "secondLastName",
+                              "value": "Azevedo"
+                            },
+                            {
+                              "key": "birthDate",
+                              "value": "13/11/1995"
+                            },
+                            {
+                              "key": "gender",
+                              "value": "Femenino"
+                            }
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                },
+                {
+                  "name": "ej03_intro_spring",
+                  "item": [
+                    {
+                      "name": "Update person",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"dni\": \"11111111A\",\r\n    \"firstName\": \"Susana\",\r\n    \"lastName\": \"Editado3\",\r\n    \"secondLastName\": \"García\",\r\n    \"birthDate\": \"15/05/1995\",\r\n    \"gender\": \"Femenino\"\r\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "http://localhost:8080/listadoPersonas",
+                          "protocol": "http",
+                          "host": [
+                            "localhost"
+                          ],
+                          "port": "8080",
+                          "path": [
+                            "listadoPersonas"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
