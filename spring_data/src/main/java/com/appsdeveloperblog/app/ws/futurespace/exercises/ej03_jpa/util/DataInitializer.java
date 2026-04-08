@@ -1,7 +1,10 @@
-package com.appsdeveloperblog.app.ws.futurespace.exercises.ej02_jpa.util;
+package com.appsdeveloperblog.app.ws.futurespace.exercises.ej03_jpa.util;
 
 import com.appsdeveloperblog.app.ws.futurespace.exercises.ej02_jpa.entities.*;
-import com.appsdeveloperblog.app.ws.futurespace.exercises.ej02_jpa.repositories.*;
+import com.appsdeveloperblog.app.ws.futurespace.exercises.ej03_jpa.repositories.AuthorRepository;
+import com.appsdeveloperblog.app.ws.futurespace.exercises.ej03_jpa.repositories.BookRepository;
+import com.appsdeveloperblog.app.ws.futurespace.exercises.ej03_jpa.repositories.CategoryRepository;
+import com.appsdeveloperblog.app.ws.futurespace.exercises.ej03_jpa.repositories.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

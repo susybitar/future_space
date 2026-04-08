@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.app.ws.futurespace.exercises.ej02_jpa.repositories;
+package com.appsdeveloperblog.app.ws.futurespace.exercises.ej03_jpa.repositories;
 
 import com.appsdeveloperblog.app.ws.futurespace.exercises.ej02_jpa.entities.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
