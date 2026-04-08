@@ -15,8 +15,11 @@ Desarrollo de aplicaciones utilizando el core de Spring.
 * Inyección de dependencias (DI) e Inversión de Control (IoC).
 * Gestión de contextos y configuración de Beans.
 
-### [Spring Data](spring_data/) *(En desarrollo)*
+### [Spring Data](spring_data/)
 Persistencia de datos, repositorios JPA y gestión de bases de datos relacionales.
+* Implementación de entidades JPA con relaciones One-To-Many y Many-To-One.
+* **Destacado:** [JPA Query Engine](spring_data/src/main/java/com/appsdeveloperblog/app/ws/futurespace/exercises/ej03_jpa/) - Desarrollo de repositorios avanzados utilizando Query Methods y @Query para consultas personalizadas.
+* Carga dinámica de catálogos mediante CommandLineRunner para inicialización de entornos.
 
 ---
 
