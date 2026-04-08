@@ -31,4 +31,4 @@ De acuerdo con los requisitos de entrega:
 2. **Arrancar**: Ejecutar el archivo `.jar` generado en la carpeta `target` o iniciar la aplicación desde la clase principal en IntelliJ.
 
 ---
-Desarrollado por: Susana Bitar
+**Desarrollado por:** Susana Bitar
