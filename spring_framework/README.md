@@ -29,3 +29,6 @@ De acuerdo con los requisitos de entrega:
 ## Instrucciones de Ejecución
 1. **Compilar**: Ejecutar `mvn clean install -Dmaven.test.skip=true` en la terminal para generar el archivo ejecutable.
 2. **Arrancar**: Ejecutar el archivo `.jar` generado en la carpeta `target` o iniciar la aplicación desde la clase principal en IntelliJ.
+
+---
+Desarrollado por: Susana Bitar
