@@ -28,4 +28,13 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     )
     List<Book> findBooksAfterDate(@Param("fechaLimite") LocalDate fechaLimite);
 
+    /**
+     * Ejercicio JPA 5: Busca y devuelve los libros publicados después de una fecha exacta.
+     * Utiliza la derivación de consultas de Spring Data JPA (Query Method)
+     * basada en el nombre del método.
+     *
+     * @param date Fecha límite para la búsqueda.
+     * @return Lista de libros cuya fecha de publicación es posterior a la indicada.
+     */
+    List<Book> findByPublicationDateAfter(LocalDate date);
 }

@@ -13,7 +13,7 @@ import java.time.LocalDate;
  */
 @Component
 @Order(2)
-public class FindBooksQuery implements CommandLineRunner {
+public class FindBooksCustomQuery implements CommandLineRunner {
 
     private final BookRepository bookRepository;
 
@@ -22,7 +22,7 @@ public class FindBooksQuery implements CommandLineRunner {
      *
      * @param bookRepository Repositorio de libros.
      */
-    public FindBooksQuery(BookRepository bookRepository) {
+    public FindBooksCustomQuery(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
