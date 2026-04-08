@@ -2,6 +2,8 @@ package com.appsdeveloperblog.app.ws.futurespace.exercises.ej02_jpa.entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 /**
  * Entidad que representa un libro en el sistema.
  * Esta clase une las entidades Author, Publisher y Category.
@@ -41,13 +43,13 @@ public class Book {
     private String title;
 
     /**
-     * Año de publicación del libro.
+     * Fecha de publicación del libro.
      */
     @Column(
-            name = "publication_year",
+            name = "publication_date",
             nullable = false
     )
-    private Integer publicationYear;
+    private LocalDate publicationDate;
 
     /**
      * Relación con el Autor del libro.
@@ -93,15 +95,15 @@ public class Book {
      *
      * @param isbn            Código ISBN.
      * @param title           Título del libro.
-     * @param publicationYear Año de publicación.
+     * @param publicationDate Año de publicación.
      * @param author          Autor vinculado.
      * @param publisher       Editorial vinculada.
      * @param category        Categoría vinculada.
      */
-    public Book(String isbn, String title, Integer publicationYear, Author author, Publisher publisher, Category category) {
+    public Book(String isbn, String title, LocalDate publicationDate, Author author, Publisher publisher, Category category) {
         this.isbn = isbn;
         this.title = title;
-        this.publicationYear = publicationYear;
+        this.publicationDate = publicationDate;
         this.author = author;
         this.publisher = publisher;
         this.category = category;
@@ -133,12 +135,12 @@ public class Book {
         this.title = title;
     }
 
-    public Integer getPublicationYear() {
-        return publicationYear;
+    public LocalDate getPublicationDate() {
+        return publicationDate;
     }
 
-    public void setPublicationYear(Integer publicationYear) {
-        this.publicationYear = publicationYear;
+    public void setPublicationDate(LocalDate publicationDate) {
+        this.publicationDate = publicationDate;
     }
 
     public Author getAuthor() {

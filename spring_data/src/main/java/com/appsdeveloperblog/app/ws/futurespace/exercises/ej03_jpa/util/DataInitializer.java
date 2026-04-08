@@ -6,6 +6,7 @@ import com.appsdeveloperblog.app.ws.futurespace.exercises.ej03_jpa.repositories.
 import com.appsdeveloperblog.app.ws.futurespace.exercises.ej03_jpa.repositories.CategoryRepository;
 import com.appsdeveloperblog.app.ws.futurespace.exercises.ej03_jpa.repositories.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -16,6 +17,7 @@ import java.util.List;
  * Utiliza los repositorios para insertar temáticas, editoriales, autores y libros.
  */
 @Component
+@Order(1)
 public class DataInitializer implements CommandLineRunner {
 
     private final BookRepository bookRepo;
@@ -49,6 +51,13 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println(">> Cargando datos oficiales del catálogo...");
 
+        // Limpieza previa para evitar duplicados realizando las pruebas necesarias
+
+        bookRepo.deleteAll();
+        authorRepo.deleteAll();
+        publisherRepo.deleteAll();
+        categoryRepo.deleteAll();
+
         // Categorias
         Category c1 = categoryRepo.save(new Category("Historia"));
         Category c2 = categoryRepo.save(new Category("Novela"));
@@ -70,26 +79,26 @@ public class DataInitializer implements CommandLineRunner {
 
         // Libros
         bookRepo.saveAll(List.of(
-                new Book("978-01", "Historia de Alemania", 2001, a1, e1, c1),
-                new Book("978-02", "Historia de España", 2002, a1, e1, c1),
-                new Book("978-03", "Historia de Francia", 2002, a1, e1, c1),
-                new Book("978-04", "La sociedad medieval", 2001, a2, e1, c1),
-                new Book("978-05", "Angular desde 0", 2013, a3, e2, c3),
-                new Book("978-06", "Crepúsculo Vampiros", 1999, a4, e3, c2),
-                new Book("978-07", "Crepúsculo Zombies", 1998, a4, e3, c2),
-                new Book("978-08", "Crepúsculo Monsters", 1997, a4, e3, c2),
-                new Book("978-09", "Harry Potter I", 2000, a5, e3, c2),
-                new Book("978-10", "Harry Potter II", 2001, a5, e3, c2),
-                new Book("978-11", "Harry Potter III", 2001, a5, e3, c2),
-                new Book("978-12", "Harry Potter IV", 2002, a5, e3, c2),
-                new Book("978-13", "La sociedad industrial", 1972, a2, e1, c1),
-                new Book("978-14", "Los templarios", 1998, a6, e1, c1),
-                new Book("978-15", "Los albigenses", 1986, a6, e1, c1),
-                new Book("978-16", "Los godos", 2001, a6, e1, c1),
-                new Book("978-17", "Spring", 2014, a7, e2, c3),
-                new Book("978-18", "JQuery", 2015, a7, e2, c3),
-                new Book("978-19", "MySQL", 2016, a7, e2, c3),
-                new Book("978-20", "Oracle", 2003, a7, e2, c3)
+                new Book("978-01", "Historia de Alemania", LocalDate.of(2001, 1, 1), a1, e1, c1),
+                new Book("978-02", "Historia de España", LocalDate.of(2002, 1, 1), a1, e1, c1),
+                new Book("978-03", "Historia de Francia", LocalDate.of(2002, 1, 1), a1, e1, c1),
+                new Book("978-04", "La sociedad medieval", LocalDate.of(2001, 1, 1), a2, e1, c1),
+                new Book("978-05", "Angular desde 0", LocalDate.of(2013, 1, 1), a3, e2, c3),
+                new Book("978-06", "Crepúsculo Vampiros", LocalDate.of(1999, 1, 1), a4, e3, c2),
+                new Book("978-07", "Crepúsculo Zombies", LocalDate.of(1998, 1, 1), a4, e3, c2),
+                new Book("978-08", "Crepúsculo Monsters", LocalDate.of(1997, 1, 1), a4, e3, c2),
+                new Book("978-09", "Harry Potter I", LocalDate.of(2000, 1, 1), a5, e3, c2),
+                new Book("978-10", "Harry Potter II", LocalDate.of(2001, 1, 1), a5, e3, c2),
+                new Book("978-11", "Harry Potter III", LocalDate.of(2001, 1, 1), a5, e3, c2),
+                new Book("978-12", "Harry Potter IV", LocalDate.of(2002, 1, 1), a5, e3, c2),
+                new Book("978-13", "La sociedad industrial", LocalDate.of(1972, 1, 1), a2, e1, c1),
+                new Book("978-14", "Los templarios", LocalDate.of(1998, 1, 1), a6, e1, c1),
+                new Book("978-15", "Los albigenses", LocalDate.of(1986, 1, 1), a6, e1, c1),
+                new Book("978-16", "Los godos", LocalDate.of(2001, 1, 1), a6, e1, c1),
+                new Book("978-17", "Spring", LocalDate.of(2014, 1, 1), a7, e2, c3),
+                new Book("978-18", "JQuery", LocalDate.of(2015, 1, 1), a7, e2, c3),
+                new Book("978-19", "MySQL", LocalDate.of(2016, 1, 1), a7, e2, c3),
+                new Book("978-20", "Oracle", LocalDate.of(2003, 1, 1), a7, e2, c3)
         ));
 
         System.out.println(">> ¡Base de datos poblada correctamente!");
